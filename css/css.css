@@ -4,7 +4,6 @@
 
 * {
     font-family: "Mada", sans-serif;
-
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -31,12 +30,27 @@ main {
 }
 
 
-main .div-content {}
 
+main .div-content {
+    position: relative;
+    animation-name: subir-titulo;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+
+}
+
+@keyframes subir-titulo {
+    0% {
+        top: 50px;
+    }
+
+    100% {
+        top: 0;
+    }
+}
 
 main .div-content h1 {
     margin-bottom: 20px;
-
     font-size: 74px;
     padding: 0;
     line-height: 80px;
@@ -66,8 +80,25 @@ main .div-content p {
 
 }
 
+main .div-grid {
+    position: relative;
+    animation-name: subir-grid;
+    animation-duration: 1.2s;
+    animation-timing-function: ease;
 
-.div-grid article {
+}
+
+@keyframes subir-grid {
+    0% {
+        top: 20px;
+    }
+
+    100% {
+        top: 0;
+    }
+}
+
+.div-grid figure {
     cursor: pointer;
     padding: 7px;
     background-color: white;
@@ -75,33 +106,33 @@ main .div-content p {
 
     box-shadow: 0 1px 2px 0px rgba(0, 0, 0, 0.085);
 }
-.div-grid article {
- 
 
-}
-.div-grid article:hover {
+.div-grid figure:hover {
     position: relative;
     animation-name: subir;
-animation-duration: 1s;
-animation-timing-function: ease;
-animation-fill-mode: forwards;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
 
 }
 
 @keyframes subir {
-    0%{
+    0% {
         bottom: 0;
     }
-    50%{
+
+    50% {
         bottom: 10px;
-       
+
     }
-    100%{
+
+    100% {
         bottom: 10px;
         box-shadow: 0 1px 10px 0px rgba(0, 0, 0, 0.058);
     }
 }
-.div-grid article img {
+
+.div-grid figure img {
     object-fit: contain;
     display: block;
     width: 100%;
@@ -110,19 +141,29 @@ animation-fill-mode: forwards;
 }
 
 .section-grid-btn button {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
+    gap: 8px;
+    outline: none;
+
     right: 0;
     border: none;
     background-color: rgb(255, 255, 255);
     padding: 8px 15px;
+    height: 50px;
     font-size: 16px;
     border-radius: 20px;
     box-shadow: 0 1px 2px 0px rgba(0, 0, 0, 0.085);
     cursor: pointer;
     transition: 0.5s;
+    color: rgb(137, 137, 222);
 }
 
 .section-grid-btn button:hover {
     transition: 0.5s;
     padding: 8px 25px;
+    
 }
